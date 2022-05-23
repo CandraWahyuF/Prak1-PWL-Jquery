@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css"
+    />
+
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <title>Prak1-119140009</title>
+  </head>
+  <body>
+    <header class="text-center pt-3">
+      <h3>PEMESANAN PRODUK</h3>
+      <hr class="divider" style="color: blue; height: 2px" />
+    </header>
+
+    <div class="col-3" id="tampil_data_pesan"></div>
+
+    <div class="card col-md-5 m-auto shadow-lg mt-lg-5">
+      <h5 class="card-header">Data Pesanan</h5>
+      <div class="card-body">
+        <div class="mb-3">
+          <label for="nama_pembeli" class="form-label">Nama Pembeli</label>
+          <input
+            type="text"
+            class="form-control"
+            id="nama_pembeli"
+            placeholder="Masukan nama"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="">Pilih Produk</label>
+        </div>
+
+        <div class="mb-3">
+          <table class="table" id="data_produk">
+            <thead>
+              <tr>
+                <td>Produk</td>
+                <td>Jumlah</td>
+                <td>Aksi</td>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr id="row">
+                <td>
+                  <select
+                    name="pilih-produk"
+                    id="pilih-produk"
+                    class="form-control"
+                    style="width: auto"
+                    onchange="tampil()"
+                  >
+                    <option disabled selected>Pilih produk</option>
+                    <option value="Jet Tempur">Jet Tempur</option>
+                    <option value="Nuklir Hiroshima">Nuklir Hiroshima</option>
+                    <option value="Infinity Stone">Infinity Stone</option>
+                    <option value="Burj Khalifa">Burj Khalifa</option>
+                    <option value="Rudal Hipersonik">Rudal Hipersonik</option>
+                  </select>
+                </td>
+                <td>
+                  <input
+                    type="number"
+                    id="jumlah"
+                    name="jumlah"
+                    min="0"
+                    class="form-control"
+                    placeholder="Jumlah"
+                  />
+                </td>
+                <td>
+                  <button class="tambah border-0" style="background-color: green;"">
+                    <i
+                      class="bi bi-plus-lg"
+                      style="color: white"
+                    ></i>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <a id="pesan" class="btn btn-primary">Pesan</a>
+      </div>
+    </div>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="index.js"></script>
+  </body>
+</html>
